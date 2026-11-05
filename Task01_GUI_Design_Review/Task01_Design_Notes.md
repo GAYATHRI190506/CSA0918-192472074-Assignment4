@@ -22,3 +22,10 @@ The event handler should validate basic GUI input, call the service, and update 
 
 ## 1.3 Design Defence
 The redesigned separation makes the GUI easier to test because validation and payment logic can be tested independently. The service can be reused by another interface without changing business rules. Database code is isolated, reducing maintenance effort. The GUI remains focused on collecting input and presenting results, so changes to the payment process do not require rewriting the entire event handler.
+## 1.4 Alternative Concept and Complexity Comparison
+
+An alternative design is to keep the event-handling logic directly inside the GUI class. This approach is simpler for a small application because fewer classes are required. However, as the application grows, the GUI class becomes difficult to maintain and test.
+
+The FeeWindow + FeeService design has slightly more structural complexity because the responsibilities are separated into multiple classes. However, it provides better maintainability, reusability, testability, and separation of concerns.
+
+Therefore, the separated design is preferred for a larger application, while a single-class event-handling design may be acceptable for a very small prototype.
