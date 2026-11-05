@@ -1,0 +1,2 @@
+# MySQL Connector/J is required.
+# Download the current MySQL Connector/J JAR and add it to the classpath.
